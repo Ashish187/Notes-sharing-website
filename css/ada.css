@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.ad .ada1{
+    display: flex;
+    margin: 60px;
+}
+
+.ad .ada1 a{
+    border: 2px solid black;
+    width: 8%;
+    color: black;
+    background: skyblue;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 68rem;
+    line-height: 30px;
+}
+.ad .ada1 #number{
+    margin-left: 70.2rem;
+}
+
+.ad .ada1 #book{
+    margin-left: 75.2rem;
+}
+
+.ad .ada1 a:hover{
+    background: black;
+    color: white;
+}

@@ -1,0 +1,212 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 159fr 15fr;
+    background: rgb(123, 211, 238);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container .left ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .right{
+    margin: 20px;
+}
+
+.container .right .btn{
+    font-size: 18px;
+    width: 80px;
+    line-height: 30px;
+    border-radius: 8px;
+    outline: none;
+}
+.container .right .btn:hover{
+    cursor: pointer;
+    background: rgb(27, 30, 226);
+}
+.container .left ul li{
+    margin: 20px;
+   list-style: none;
+    font-size: 20px;
+}
+
+.container .left ul li a{
+   text-decoration: none;
+}
+.container .left ul li .up{
+    padding-left: 10px;
+}
+
+.container .left ul .sub-menu{
+    display: none;
+}
+.container .left ul .year-menu:hover .sub-menu{
+    display: block;
+    position: absolute;
+    /* margin-left: -15px; */
+    background: rgb(141, 141, 235);
+}
+
+.container .left ul .year-menu:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+.container .left ul .year-menu .sub-menu .sem-menu .sem{
+    padding-left: 100px;
+}
+.sub-menu2{
+    display: none;
+}
+
+.sem-menu:hover .sub-menu2{
+    display: block;
+    position: absolute;
+    background: rgb(94, 201, 243);
+    margin-left: 125px;
+}
+
+.container .left a:hover{
+    color: rgb(215, 239, 248);
+}
+
+.box{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    margin-top: 105px;
+}
+
+.box .ada{
+    display: flex;
+}
+.box .ada h3{
+    margin-left: 20px;
+}
+
+.box .ada a{
+    margin-left: 60rem;
+}
+.box .ada a button{
+    width: 168%;
+    line-height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.box .ada a button:hover{
+    cursor: pointer;
+}
+/* .box .ada button:hover{
+     cursor: pointer;
+} */
+
+.box .maths{
+    margin-top: 30px;
+    display: flex;
+}
+
+.box .maths h3{
+    margin-left: 20px;
+}
+.box .maths a{
+    margin-left: 62rem;
+}
+.box .maths a button{
+    width: 168%;
+    line-height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.box .maths a button:hover{
+    cursor: pointer;
+}
+.box .unix{
+    margin-top: 30px;
+    display: flex;
+}
+
+.box .unix h3{
+    margin-left: 20px;
+}
+.box .unix a{
+    margin-left: 61.3rem;
+}
+.box .unix a button{
+    width: 168%;
+    line-height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.box .unix a button:hover{
+    cursor: pointer;
+}
+.box .toc{
+    margin-top: 30px;
+    display: flex;
+}
+
+.box .toc h3{
+    margin-left: 20px;
+}
+.box .toc a{
+    margin-left: 64.2rem;
+}
+.box .toc a button{
+    width: 168%;
+    line-height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.box .toc a button:hover{
+    cursor: pointer;
+}
+.box .arm{
+    margin-top: 30px;
+    display: flex;
+}
+
+.box .arm h3{
+    margin-left: 20px;
+}
+.box .arm a{
+    margin-left: 63.3rem;
+}
+.box .arm a button{
+    width: 168%;
+    line-height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.box .arm a button:hover{
+    cursor: pointer;
+}
+.box .oops{
+    margin-top: 30px;
+    display: flex;
+}
+
+.box .oops h3{
+    margin-left: 20px;
+}
+.box .oops a{
+    margin-left: 55.8rem;
+}
+.box .oops a button{
+    width: 168%;
+    line-height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.box .oops a button:hover{
+    cursor: pointer;
+}

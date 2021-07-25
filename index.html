@@ -12,8 +12,8 @@
     <div class="container">
     <div class="left">
         <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li class="year-menu"><a href="#" class="years">Years<i class="fas fa-angle-up up"></i></a>
         <div class="sub-menu">
             <ul>
@@ -30,23 +30,26 @@
                         <li><a href="/3rd">3rd Semester</a></li>
                         <li><a href="/4th">4th Semester</a></li>
                     </ul>
-                </div></li>
+                </div>
+            </li>
                 <li class="sem-menu"><a href="#">3rd Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
                     <ul>
                         <li><a href="/5th">5th Semester</a></li>
                         <li><a href="/6th">6th Semester</a></li>
                     </ul>
-                </div></li>
+                </div>
+            </li>
                 <li class="sem-menu"><a href="#">4th Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
                     <ul>
                         <li><a href="/7th">7th Semester</a></li>
                         <li><a href="/8th">8th Semester</a></li>
                     </ul>
-                </div></li>
+                </div>
+            </li>
             </ul>
         </div>
         </li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 
@@ -54,6 +57,59 @@
         <button class="btn">Logout</button>
     </div>
     </div>
-    <script src="/index.js"></script>
+
+    <section id="home">
+        <div class="home-sec">
+    <h2>Hello Everyone,This is Ashish Anand</h2>
+    <p>Welcome to Notes Downloading Website</p>
+    </div>
+    </section>
+
+    <section id="about">
+        <h1>About</h1>
+    <div class="about-sec">
+    <p>This is the website where you can download your respective semester notes. Here you will be provided all the subjects which you are going to study in your respective semester. With each subjects different notes are provided for each units.</p>
+
+    <img src="/not.png" alt="notes" height="200px" width="200px">
+    </div>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-grid">
+            <div class="contact-sec1">
+                <i class="fas fa-map-marker-alt">: Patna,Bihar</i>
+                <i class="fas fa-envelope-open">: ashishanand16086@gmail.com</i>
+                <i class="fas fa-phone">: 9304642431</i>
+            </div>
+
+            <div id="form">
+            <input type="text" placeholder="Enter your name" id="name" name="name" required>
+            <input type="email" placeholder="Enter your mail" id="email" name="email" required>
+            <input type="number" placeholder="Enter your number" id="number" name="number" required>
+            <textarea name="area" id="area" cols="30" rows="10" placeholder="Your Message..."></textarea>
+            <button type="submit" id="btn" onclick="save()">Submit</button>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.985652736632!2d85.10729565080791!3d25.638601683612748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed593425a70f1f%3A0x1be26ed210ba9c5f!2sKurji%20More!5e0!3m2!1sen!2sin!4v1627190697136!5m2!1sen!2sin" width="1518" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <div class="bottom">
+            <a href="https://www.linkedin.com/in/ashish-anand-090a141a2/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ashish187"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/ashishanand3686/"><i class="fab fa-instagram-square"></i></a>
+        </div>
+
+        <div class="foot">
+            Copyright © NotesDownload 2021
+        </div>
+    </section>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="/firebase.js"></script>
 </body>
 </html>
+
+<!-- <i class="fas fa-map-marker-alt"></i> -->

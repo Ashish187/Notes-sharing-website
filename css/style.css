@@ -3,17 +3,24 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .container{
     display: grid;
     grid-template-columns: 159fr 15fr;
     background: rgb(123, 211, 238);
+    position: fixed;
+    width: 100%;
 }
 
 .container .left ul{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* position: fixed;
+    z-index: 10000; */
 }
 .container .right{
     margin: 20px;
@@ -29,6 +36,7 @@
 .container .right .btn:hover{
     cursor: pointer;
     background: rgb(27, 30, 226);
+    color: white;
 }
 .container .left ul li{
     margin: 20px;
@@ -49,6 +57,7 @@
 .container .left ul .year-menu:hover .sub-menu{
     display: block;
     position: absolute;
+    /* margin-left: -15px; */
     background: rgb(141, 141, 235);
 }
 
@@ -57,7 +66,7 @@
     margin: 10px;
 }
 .container .left ul .year-menu .sub-menu .sem-menu .sem{
-    padding-left: 80px;
+    padding-left: 100px;
 }
 .sub-menu2{
     display: none;
@@ -72,4 +81,132 @@
 
 .container .left a:hover{
     color: rgb(215, 239, 248);
+}
+
+#home{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 90vh;
+    width: 100%;
+    background-image: url(/no.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#home .home-sec{
+    padding-top: 35vh;
+    text-align: center;
+    font-size: 22px;
+}
+
+#home .home-sec p{
+    margin-top: 10px;
+    font-size: 25px;
+    color: rgb(16, 217, 231);
+}
+/*About section*/
+
+#about{
+    background: rgb(187, 183, 183);
+    height: 500px;
+}
+#about h1{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 44px;
+}
+
+.about-sec{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 6fr 8fr;
+}
+
+.about-sec p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 12rem;
+    font-size: 26px;
+}
+
+.about-sec img{
+    border-radius: 50%;
+    margin-left: 24rem;
+}
+
+/* Contact Section*/
+
+#contact{
+    height: 500px;
+    width: 100%;
+}
+#contact h1{
+    text-align: center;
+    font-size: 26px;
+    margin-top: 2rem;
+}
+#contact .contact-grid{
+    display: grid;
+    grid-template-columns: 600px 800px;
+}
+#contact .contact-grid .contact-sec1{
+   margin: 2rem;
+   display: flex;
+   flex-direction: column;
+   margin-left: 6rem;
+}
+
+#contact .contact-grid .contact-sec1 i{
+    margin: 10px;
+    font-size: 24px;
+}
+
+#contact #form{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    margin-left: 16rem;
+}
+
+#contact #form input,textarea{
+    width: 80%;
+    margin: 10px;
+    line-height: 20px;
+    border-radius: 8px;
+    outline: none;
+}
+#contact #form input,textarea::placeholder{
+    font-size: 16px;
+}
+#contact #form #btn{
+   width: 14%;
+   margin-left: 22.4rem;
+   line-height: 22px;
+   font-size: 17px;
+   border-radius: 8px;
+}
+
+#contact #form #btn:hover{
+    cursor: pointer;
+    color: black;
+    background: skyblue;
+}
+
+.bottom{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.bottom i{
+    margin-left: 10px;
+    font-size: 30px;
+    color: black;
+}
+
+.bottom i:hover{
+    color: grey;
+}
+
+.foot{
+    font-size: 16px;
+    text-align: center;
+    font-weight: bolder;
 }

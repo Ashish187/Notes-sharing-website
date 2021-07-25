@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const app = express()
 
@@ -15,6 +16,9 @@ app.get('/',(req,res)=>{
 
 app.get('/login',(req,res)=>{
     res.render('login')
+})
+app.get('/ash',(req,res)=>{
+    res.render('ash')
 })
 
 app.get('/register',(req,res)=>{
@@ -43,6 +47,24 @@ app.get('/7th',(req,res)=>{
 })
 app.get('/8th',(req,res)=>{
     res.render('8th')
+})
+app.get('/ada',(req,res)=>{
+    res.render('ada')
+})
+app.get('/maths',(req,res)=>{
+    res.render('maths')
+})
+app.get('/toc',(req,res)=>{
+    res.render('toc')
+})
+app.get('/arm',(req,res)=>{
+    res.render('arm')
+})
+app.get('/oops',(req,res)=>{
+    res.render('oops')
+})
+app.get('/unix',(req,res)=>{
+    res.render('unix')
 })
 
 app.post('/register',async (req,res)=>{

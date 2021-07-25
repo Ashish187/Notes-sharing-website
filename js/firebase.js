@@ -15,12 +15,14 @@ var firebaseConfig = {
   function save(){
       var name = document.getElementById('name').value;
       var mail = document.getElementById('email').value;
-      var password = document.getElementById('pwd').value;
+      var number = document.getElementById('number').value;
+      var textarea = document.getElementById('area').value;
 
       database.ref('users/' + name).set({
           name: name,
-          password: password,
-          mail: mail
+          number: number,
+          mail: mail,
+          textarea: textarea
       })
       
     //   alert('saved')
