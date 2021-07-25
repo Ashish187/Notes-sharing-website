@@ -3,8 +3,79 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.container{
+    display: grid;
+    grid-template-columns: 159fr 15fr;
+    background: rgb(123, 211, 238);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-h2{
+.container .left ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .right{
+    margin: 20px;
+}
+
+.container .right .btn{
+    font-size: 18px;
+    width: 80px;
+    line-height: 30px;
+    border-radius: 8px;
+    outline: none;
+}
+.container .right .btn:hover{
+    cursor: pointer;
+    background: rgb(27, 30, 226);
+}
+.container .left ul li{
+    margin: 20px;
+   list-style: none;
+    font-size: 20px;
+}
+
+.container .left ul li a{
+   text-decoration: none;
+}
+.container .left ul li .up{
+    padding-left: 10px;
+}
+
+.container .left ul .sub-menu{
+    display: none;
+}
+.container .left ul .year-menu:hover .sub-menu{
+    display: block;
+    position: absolute;
+    /* margin-left: -15px; */
+    background: rgb(141, 141, 235);
+}
+
+.container .left ul .year-menu:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+.container .left ul .year-menu .sub-menu .sem-menu .sem{
+    padding-left: 100px;
+}
+.sub-menu2{
+    display: none;
+}
+
+.sem-menu:hover .sub-menu2{
+    display: block;
+    position: absolute;
+    background: rgb(94, 201, 243);
+    margin-left: 125px;
+}
+
+.container .left a:hover{
+    color: rgb(215, 239, 248);
+}
+
+.head h2{
     text-align: center;
     margin-top: 2rem;
 }
