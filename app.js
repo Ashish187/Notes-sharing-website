@@ -1,20 +1,44 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+  }
+
 const express = require('express')
 const path = require('path')
+const passport = require('passport')
 // const mongoose = require('mongoose')
+const flash = require('express-flash')
+const session = require('express-session')
 const bcrypt = require('bcrypt')
+const methodoverride = require('method-override')
 const app = express()
 
+const initializePassport = require('./passport-config')
+initializePassport(
+    passport,
+    name => users.find(user => user.name === name),
+    id => users.find(user => user.id === id)
+  )
+  
 const PORT = process.env.PORT || 7200
-const records = []
+const users = []
 app.set('views', path.join(__dirname,'views'))
 app.set('view engine','ejs')
 app.use(express.urlencoded({extended: false}))
+app.use(flash())
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(methodoverride('_method'))
 
-app.get('/',(req,res)=>{
+app.get('/',checkAuthenticated,(req,res)=>{
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/login',(req,res)=>{
+app.get('/login',checkNotAuthenticated,(req,res)=>{
     res.render('login')
 })
 app.get('/ash',(req,res)=>{
@@ -45,6 +69,7 @@ app.get('/6th',(req,res)=>{
 app.get('/7th',(req,res)=>{
     res.render('7th')
 })
+
 app.get('/8th',(req,res)=>{
     res.render('8th')
 })
@@ -66,11 +91,16 @@ app.get('/oops',(req,res)=>{
 app.get('/unix',(req,res)=>{
     res.render('unix')
 })
+app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+  }))
 
-app.post('/register',async (req,res)=>{
+app.post('/register',checkNotAuthenticated,async (req,res)=>{
     try{
     const hashedpassword = await bcrypt.hash(req.body.pwd,10)
-    records.push({
+    users.push({
         id: Date.now().toString(),
         name: req.body.name,
         email: req.body.email,
@@ -81,13 +111,31 @@ app.post('/register',async (req,res)=>{
     catch{
         res.redirect('/register')
     }
-    console.log(records)
+    console.log(users)
 })
-
+app.delete('/logout', (req, res) => {
+    req.logOut()
+    res.redirect('/login')
+  })
+  
 app.use(express.static(__dirname + '/css'))
 app.use(express.static(__dirname + '/img'))
 app.use(express.static(__dirname + '/js'))
 
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      return next()
+    }
+  
+    res.redirect('/login')
+  }
+  
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      return res.redirect('/')
+    }
+    next()
+  }
 app.listen(PORT,()=>{
     console.log(`Listening to the port ${PORT}`)
 })

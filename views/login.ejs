@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="/login.css">
 </head>
 <body>
+    <% if (messages.error) { %>
+        <%= messages.error %>
+      <% } %>
     <div class="container">
-        <form>
+        <form action="/login" method="POST">
             <h1>Sign In</h1>
             <input type="text" placeholder="Username" id="name" name="name" required>
-            <input type="text" placeholder="Password" id="pwd" name="pwd" required>
+            <input type="text" placeholder="Password" id="password" name="password" required>
             <button class="btn">Log In</button>
             <p>Don't have an account <a href="/register">Sign Up</a></p>
         </form>
