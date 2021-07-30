@@ -5,8 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/unix.css">
+    <script src="https://kit.fontawesome.com/0392c4d112.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    This is unix concept
+    <div class="container">
+        <div class="left">
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="year-menu"><a href="#" class="years">Years<i class="fas fa-angle-up up"></i></a>
+            <div class="sub-menu">
+                <ul>
+                    <li class="sem-menu"><a href="#">1st Year<i class="fas fa-angle-right sem"></i></a>
+                    <div class="sub-menu2">
+                        <ul>
+                            <li><a href="/1st">1st Semester</a></li>
+                            <li><a href="2nd">2nd Semester</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="sem-menu"><a href="#">2nd Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
+                        <ul>
+                            <li><a href="/3rd">3rd Semester</a></li>
+                            <li><a href="/4th">4th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                    <li class="sem-menu"><a href="#">3rd Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
+                        <ul>
+                            <li><a href="/5th">5th Semester</a></li>
+                            <li><a href="/6th">6th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                    <li class="sem-menu"><a href="#">4th Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
+                        <ul>
+                            <li><a href="/7th">7th Semester</a></li>
+                            <li><a href="/8th">8th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    
+        <form class="right" action="/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn">Logout</button>
+        </form>
+        </div>
+
+        <div class="head">
+            <h2>All Unix Units</h2>
+            </div>
+
+            <div class="un">
+                <div class="unix1">
+                <h3>Unix unit 1 ppt</h3>
+                <a href="/u1.ppt" id="u1" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="unix1">
+                <h3>Unix unit 2 ppt</h3>
+                <a href="/u2.ppt" id="u2" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="unix1">
+                <h3>Unix unit 3 ppt</h3>
+                <a href="/u3.ppt" id="u3" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="unix1">
+                <h3>Unix unit 4 ppt</h3>
+                <a href="/u4.ppt" id="u4" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="unix1">
+                <h3>Shell Programming</h3>
+                <a href="/shell.ppt" id="u41" download>DOWNLOAD</a>
+                </div>
+
+                <div class="unix1">
+                <h3>Regex and Sed Commands</h3>
+                <a href="/sed.docx" id="sed" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="unix1">
+                <h3>Unix Book</h3>
+                <a href="/unix book.pdf" id="books" download>DOWNLOAD</a>
+                </div>
+            </div>
 </body>
 </html>

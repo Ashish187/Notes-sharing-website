@@ -5,8 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/toc.css">
+    <script src="https://kit.fontawesome.com/0392c4d112.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    This is toc concept
+    <div class="container">
+        <div class="left">
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="year-menu"><a href="#" class="years">Years<i class="fas fa-angle-up up"></i></a>
+            <div class="sub-menu">
+                <ul>
+                    <li class="sem-menu"><a href="#">1st Year<i class="fas fa-angle-right sem"></i></a>
+                    <div class="sub-menu2">
+                        <ul>
+                            <li><a href="/1st">1st Semester</a></li>
+                            <li><a href="2nd">2nd Semester</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="sem-menu"><a href="#">2nd Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
+                        <ul>
+                            <li><a href="/3rd">3rd Semester</a></li>
+                            <li><a href="/4th">4th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                    <li class="sem-menu"><a href="#">3rd Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
+                        <ul>
+                            <li><a href="/5th">5th Semester</a></li>
+                            <li><a href="/6th">6th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                    <li class="sem-menu"><a href="#">4th Year<i class="fas fa-angle-right sem"></i></a><div class="sub-menu2">
+                        <ul>
+                            <li><a href="/7th">7th Semester</a></li>
+                            <li><a href="/8th">8th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    
+        <form class="right" action="/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn">Logout</button>
+        </form>
+        </div>
+
+        <div class="head">
+            <h2>All Unix Units</h2>
+            </div>
+
+            <div class="to">
+                <div class="toc1">
+                <h3>Toc unit 1 printed notes</h3>
+                <a href="/t1.pdf" id="t1" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="toc1">
+                <h3>Toc unit 1 Book part-1</h3>
+                <a href="/c1.pdf" id="c1" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="toc1">
+                <h3>Toc unit 1 Book part-2</h3>
+                <a href="/c1-1.pdf" id="c1-1" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="toc1">
+                <h3>Toc unit 1 Book part-3</h3>
+                <a href="/c1-2.ppt" id="c1-2" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="toc1">
+                <h3>Toc unit 2 notes</h3>
+                <a href="/t2.pdf" id="t2" download>DOWNLOAD</a>
+                </div>
+
+                <div class="toc1">
+                <h3>Toc unit 3 notes</h3>
+                <a href="/t3.pdf" id="t3" download>DOWNLOAD</a>
+                </div>
+        
+                <div class="toc1">
+                <h3>Toc unit 4 Pushdown Automata</h3>
+                <a href="/t4.pdf" id="t4" download>DOWNLOAD</a>
+                </div>
+
+                <div class="toc1">
+                <h3>Toc unit 4 Turing Machine</h3>
+                <a href="/t41.pdf" id="t41" download>DOWNLOAD</a>
+                </div>
+            </div>
 </body>
 </html>

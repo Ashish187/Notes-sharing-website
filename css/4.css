@@ -38,6 +38,7 @@
 }
 
 .container .left ul li a{
+    color: blue;
    text-decoration: none;
 }
 .container .left ul li .up{

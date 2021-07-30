@@ -7,11 +7,37 @@ const path = require('path')
 const passport = require('passport')
 // const mongoose = require('mongoose')
 const flash = require('express-flash')
+// const bodyparser = require('body-parser')
 const session = require('express-session')
 const bcrypt = require('bcrypt')
 const methodoverride = require('method-override')
 const app = express()
 
+// const url = "mongodb+srv://notes:<password>@cluster0.ivryj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+// mongoose.connect(url,{
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
+
+// const schema = new mongoose.Schema(
+//     {
+//         data: Object,
+//     },
+//     {
+//         collection: "form"
+//     }
+//     );
+
+    // const Form = mongoose.model("Form",schema);
+
+    // const formData = (bodyData) => {
+    //     Form({ data: bodyData }).save((err) => {
+    //       if (err) {
+    //         throw err;
+    //       }
+    //     });
+    //   };
+    //   const urlencodedparser = bodyparser.urlencoded({extended: false})
 const initializePassport = require('./passport-config')
 initializePassport(
     passport,
@@ -30,6 +56,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodoverride('_method'))
@@ -37,6 +64,11 @@ app.use(methodoverride('_method'))
 app.get('/',checkAuthenticated,(req,res)=>{
     res.sendFile(__dirname + '/index.html')
 })
+
+// app.post('/register',urlencodedparser,(req,res)=>{
+//     formData(req.body);
+//     res.render('register',{name: req.body.name});
+// });
 
 app.get('/login',checkNotAuthenticated,(req,res)=>{
     res.render('login')
@@ -121,6 +153,7 @@ app.delete('/logout', (req, res) => {
 app.use(express.static(__dirname + '/css'))
 app.use(express.static(__dirname + '/img'))
 app.use(express.static(__dirname + '/js'))
+app.use(express.static(__dirname + '/pdf'))
 
 function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
@@ -139,3 +172,5 @@ function checkNotAuthenticated(req, res, next) {
 app.listen(PORT,()=>{
     console.log(`Listening to the port ${PORT}`)
 })
+
+// mongodb+srv://notes:<password>@cluster0.ivryj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

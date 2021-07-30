@@ -37,6 +37,7 @@
 }
 
 .container .left ul li a{
+    color: blue;
    text-decoration: none;
 }
 .container .left ul li .up{
@@ -107,4 +108,32 @@
 .ad .ada1 a:hover{
     background: black;
     color: white;
+}
+
+.ad .ada1 #decrease{
+    margin-left: 68.6rem;
+}
+
+.ad .ada1 #transform{
+    margin-left: 67.6rem;
+}
+
+.ad .ada1 #space{
+    margin-left: 66.9rem;
+}
+
+.ad .ada1 #dynamic{
+    margin-left: 68.2rem;
+}
+
+.ad .ada1 #greedy{
+    margin-left: 71rem;
+}
+
+.ad .ada1 #power{
+    margin-left: 64.4rem;
+}
+
+.ad .ada1 #power2{
+    margin-left: 55.6rem;
 }

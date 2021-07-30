@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: 159fr 15fr;
+    background: rgb(123, 211, 238);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container .left ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .right{
+    margin: 20px;
+}
+
+.container .right .btn{
+    font-size: 18px;
+    width: 80px;
+    line-height: 30px;
+    border-radius: 8px;
+    outline: none;
+}
+.container .right .btn:hover{
+    cursor: pointer;
+    background: rgb(27, 30, 226);
+}
+.container .left ul li{
+    margin: 20px;
+   list-style: none;
+    font-size: 20px;
+}
+
+.container .left ul li a{
+    color: blue;
+   text-decoration: none;
+}
+.container .left ul li .up{
+    padding-left: 10px;
+}
+
+.container .left ul .sub-menu{
+    display: none;
+}
+.container .left ul .year-menu:hover .sub-menu{
+    display: block;
+    position: absolute;
+    /* margin-left: -15px; */
+    background: rgb(141, 141, 235);
+}
+
+.container .left ul .year-menu:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+.container .left ul .year-menu .sub-menu .sem-menu .sem{
+    padding-left: 100px;
+}
+.sub-menu2{
+    display: none;
+}
+
+.sem-menu:hover .sub-menu2{
+    display: block;
+    position: absolute;
+    background: rgb(94, 201, 243);
+    margin-left: 125px;
+}
+
+.container .left a:hover{
+    color: rgb(215, 239, 248);
+}
+
+.head h2{
+    text-align: center;
+    margin-top: 2rem;
+}
+.un .unix1{
+    display: flex;
+    margin: 60px;
+}
+.un .unix1 a{
+    border: 2px solid black;
+    width: 8%;
+    color: black;
+    background: skyblue;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 68rem;
+    line-height: 30px;
+}
+
+.un .unix1 #u1{
+    margin-left: 66.2rem;
+}
+
+.un .unix1 #u2{
+    margin-left: 66.2rem;
+}
+
+.un .unix1 #u3{
+    margin-left: 66.2rem;
+}
+
+.un .unix1 #u4{
+    margin-left: 66.2rem;
+}
+
+.un .unix1 #u41{
+    margin-left: 64.2rem;
+}
+
+.un .unix1 #sed{
+    margin-left: 60.8rem;
+}
+
+.un .unix1 #books{
+    margin-left: 69rem;
+}
+
+.un .unix1 a:hover{
+    background: black;
+    color: white;
+}
+
+
+
