@@ -59,7 +59,9 @@ html{
     display: block;
     position: absolute;
     /* margin-left: -15px; */
-    background: rgb(141, 141, 235);
+    /* background: rgb(141, 141, 235); */
+    background: rgb(182, 241, 241);
+    border-radius: 16px;
 }
 
 .container .left ul .year-menu:hover .sub-menu ul{
@@ -76,12 +78,13 @@ html{
 .sem-menu:hover .sub-menu2{
     display: block;
     position: absolute;
-    background: rgb(94, 201, 243);
+    background: rgb(130, 247, 159);
+    border-radius: 16px;
     margin-left: 125px;
 }
 
 .container .left a:hover{
-    color: rgb(215, 239, 248);
+    color: rgb(124, 143, 252);
 }
 
 #home{
@@ -167,9 +170,9 @@ html{
 }
 
 #contact #form input,textarea{
-    width: 80%;
+    width: 85%;
     margin: 10px;
-    line-height: 20px;
+    line-height: 24px;
     border-radius: 8px;
     outline: none;
 }
@@ -178,7 +181,7 @@ html{
 }
 #contact #form #btn{
    width: 14%;
-   margin-left: 22.4rem;
+   margin-left: 23.4rem;
    line-height: 22px;
    font-size: 17px;
    border-radius: 8px;

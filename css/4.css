@@ -30,6 +30,7 @@
 .container .right .btn:hover{
     cursor: pointer;
     background: rgb(27, 30, 226);
+    color: white;
 }
 .container .left ul li{
     margin: 20px;
