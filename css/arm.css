@@ -41,6 +41,7 @@
     color: blue;
    text-decoration: none;
 }
+
 .container .left ul li .up{
     padding-left: 10px;
 }
@@ -51,8 +52,8 @@
 .container .left ul .year-menu:hover .sub-menu{
     display: block;
     position: absolute;
-    /* margin-left: -15px; */
-    background: rgb(141, 141, 235);
+    background: rgb(182, 241, 241);
+    border-radius: 16px;
 }
 
 .container .left ul .year-menu:hover .sub-menu ul{
@@ -69,12 +70,13 @@
 .sem-menu:hover .sub-menu2{
     display: block;
     position: absolute;
-    background: rgb(94, 201, 243);
+    background: rgb(130, 247, 159);
+    border-radius: 16px;
     margin-left: 125px;
 }
 
 .container .left a:hover{
-    color: rgb(215, 239, 248);
+    color: rgb(124, 143, 252);
 }
 
 .head h2{

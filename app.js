@@ -44,7 +44,7 @@ initializePassport(
     name => users.find(user => user.name === name),
     id => users.find(user => user.id === id)
   )
-  
+
 const PORT = process.env.PORT || 7200
 const users = []
 app.set('views', path.join(__dirname,'views'))
@@ -72,9 +72,6 @@ app.get('/',checkAuthenticated,(req,res)=>{
 
 app.get('/login',checkNotAuthenticated,(req,res)=>{
     res.render('login')
-})
-app.get('/ash',(req,res)=>{
-    res.render('ash')
 })
 
 app.get('/register',(req,res)=>{
